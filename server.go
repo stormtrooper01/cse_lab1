@@ -1,7 +1,7 @@
 package main
 
 import (
-    "net/http"
+    "net/http" //to create the server
     "time" //getting current time
     "encoding/json"
 )
