@@ -6,7 +6,7 @@ import (
     "encoding/json"
 )
 
-func main () {
+func main () { //This defines the main function
     http.ListenAndServe(":8795", nil)
     http.HandleFunc("/", getTime)
 }
