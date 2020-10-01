@@ -8,7 +8,7 @@ import (
 
 func main () { //this defines the main function
     http.ListenAndServe(":8795", nil)//start the server at port 8795 and pass the router
-    http.HandleFunc("/", getTime)if we have a request in the “/” route, you invoke the getTime()
+    http.HandleFunc("/", getTime)//if we have a request in the “/” route, you invoke the getTime()
 }
 
 func getTime (w http.ResponseWriter, r *http.Request) {
