@@ -2,12 +2,12 @@
 package main
 
 import (
-    "net/http"
-    "time"
+    "net/http" //to create the server
+    "time" //getting current time
     "encoding/json"
 )
 
-func main () {
+func main () { //this defines the main function
     http.ListenAndServe(":8795", nil)
     http.HandleFunc("/", getTime)
 }
@@ -39,8 +39,8 @@ import (
 )
 
 func main () {
-    http.ListenAndServe(":8795", nil)
-    http.HandleFunc("/", getTime)
+    http.ListenAndServe(":8795", nil) //start the server at port 8795 and pass the router
+    http.HandleFunc("/", getTime) //if we have a request in the “/” route, you invoke the getTime()
 }
 
 func getTime (w http.ResponseWriter, r *http.Request) {
